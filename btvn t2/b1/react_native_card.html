@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FontAwesome CSS -->
+    <style type="text/css">
+       .card{
+        width: 300px;
+        background-color: white;
+        border-radius: 10px;
+    
+       }
+       .card img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+       }
+
+       .card_body{
+            padding: 20px; 
+       }
+       .card_body h3{
+        font-weight: bold;
+        color: rgb(92, 91, 91);
+        text-align: left;
+        margin: 0px;
+       }
+       .card_body h5{
+        margin:0px;
+        font-size: 20px;
+       }
+       .price_box{
+        color:orange;
+
+       }
+       body{
+        background-color: gray;
+       }
+       .right_text{
+        text-align: right;
+       }
+
+       .bonus {
+        display: flex;
+       }
+       
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- image -->
+        <div>
+            <img src="react-native.png">
+        </div>
+        <!-- text --> 
+        <div class="card_body">
+            <h3>Lập trình di động đa nền tảng React Native cập nhật 2021</h3>
+            <div class="bonus">
+                <div style="width:50%; float:left">
+                    <p> Phòng lab, 14 buổi</p>
+                </div>  
+                <div style="width: 50%; float:right">
+                    <p class="right_text">4.7
+                         <i class="fa-solid fa-star" style="color:yellow; font-size: 16px"></i> 
+                        </p>
+                </div>  
+
+            </div>
+            <h5 class="price_box">
+                3,900,000đ
+            </h5>
+        </div>
+    </div>
+</body>
+</html>
