@@ -80,7 +80,7 @@ p{
 
 
 .body-card {
-    height: 200px;
+    height: 250px;
 }
 
 .card:hover .sub {
@@ -100,7 +100,7 @@ img {
     height: 200px;
 }
 
-.photo::after {
+.card:hover  .photo::after {
     content: "";
     position: absolute;
     top: 0;
