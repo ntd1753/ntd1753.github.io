@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 800px;
+    margin: auto;
+
+}
+body {
+
+}
+header {
+    text-align: center;
+    padding: 0 150px;
+
+}
+h1 {
+    color: #7559FE;
+    font-size: 50px;
+}
+h2 {
+    font-size: 25px;
+}
+p{
+    padding: 0 40px;
+    font-size: 17px;
+}
+a {
+    color: black;
+}
+.forgot {
+    margin: 5px;
+    float: right;
+    font-size: 17px;
+}
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+input {
+    height: 40px;
+    width: 300px;
+    border: 0.2px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    margin: 7px 0;
+    font-size: 15px;
+}
+#submit {
+    background-color: #7559FE;
+    height: 42px;
+    width: 300px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 4px 0;
+   font-size: 18px;
+}
+button { cursor: pointer;}
+.login {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.login-acc{
+    margin-right: 20px;
+}
+.fb-gg {
+    width: 340px;
+    height: 45px;
+    background-color: white;
+    border-radius: 5px;
+    border: 0.2px solid rgb(197, 197, 197);
+    margin: auto;
+    display: flex;
+    padding: 0 10px;
+}
+.fb-gg > p{
+    padding: 10px;
+}
+.login-gg-fb {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+margin-left: 20px;
+}
+#or {
+    margin: 10px 0; 
+}
+.sub {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer {
+    margin-top: 18px;
+    background-color: rgb(205, 195, 195);
+}
+ul {
+    padding: 12px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+li {
+    font-size: 17px;
+    color: rgb(60, 52, 52);
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+button {
+    height: 50px;
+    width: 50px;
+    margin: 100px;
+    border-radius: 50%;
+    animation-name: ex;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes ex {
+    from {
+        
+       margin: 100px;
+    }
+    7% {
+        margin-top: 50px;
+        margin-left: 200px;
+    }
+    14% {
+        margin-top: 100px;
+        margin-left: 300px;
+    }
+    21% {
+        margin-top: 50px;
+        margin-left: 400px;
+    }
+    28% {
+        margin-top: 100px;
+        margin-left: 500px;
+    }
+    35% {
+        margin-top: 50px;
+        margin-left: 600px;
+    }
+    42% {
+        margin-top: 100px;
+        margin-left: 700px;
+
+    }
+    49% {
+        margin-top: 50px;
+        margin-left: 800px;
+    }
+    56%{
+        margin-top: 100px;
+        margin-left: 700px;
+    }
+    63% {
+        margin-top: 50px;
+        margin-left: 600px;
+    }
+    70% {
+        margin-top: 100px;
+        margin-left: 500px;
+    }
+    77% {
+        margin-top: 50px;
+        margin-left: 400px;
+    }
+    84% {
+        margin-top: 100px;
+        margin-left: 300px;
+    }
+    91% {
+        margin-top: 50px;
+        margin-left: 200px;
+    }
+    to {
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+}
+
+.b1 {
+    background-color: green;
+    
+}
+.b2 {
+    background-color: aqua;
+    animation-delay: 0.5s;
+}
+.b3 {
+    background-color: rgb(255, 140, 0);
+    animation-delay: 1s;
+}
+.b4 {
+    background-color: red;
+    animation-delay: 1.s;
+}
+.b5 {
+    background-color: violet;
+    animation-delay: 2s;
+}
+.b6 {
+    background-color: yellow;
+    animation-delay: 2.5s;
+}
+button {
+    position: absolute;
+}
+</style>
+<body>
+<button class="b1"></button>
+<button class="b2"></button>
+<button class="b3"></button>
+<button class="b4"></button>
+<button class="b5"></button>
+<button class="b6"></button>
+</body>
+</html>
