@@ -5,7 +5,7 @@
 }
 
 .card {
-    width: 800px;
+    width: 900px;
     margin: auto;
 
 }
@@ -66,7 +66,7 @@ button { cursor: pointer;}
     justify-content: space-between;
 }
 .login-acc{
-    margin-right: 20px;
+    margin:0 20px;
 }
 .fb-gg {
     width: 340px;
@@ -99,6 +99,7 @@ margin-left: 20px;
 .footer {
     margin-top: 18px;
     background-color: rgb(205, 195, 195);
+    width: 100%;
 }
 ul {
     padding: 12px;
