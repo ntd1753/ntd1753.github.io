@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    height: auto;
+    width: 100%;
+    font-weight: 400;
+}
+.footer {
+    background-color: #27343B;
+    color: rgb(183, 183, 183);
+    display: flex;
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(183, 183, 183);
+}
+.information, .service, .contact {
+    flex-basis: 20%;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+h3{
+    color: white;
+    margin: 30px 0;
+    font-size: 25px;
+    
+}
+.information > p {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FFFFFF;
+    
+    line-height: 1.35;
+    font-family: "Segoe UI Light",sans-serif;
+}
+#logo {
+    width: 100%;
+}
+#logo > img {
+    margin-left: 18%;
+}
+.infor {
+    margin-top: 30px;
+}
+.Address {
+    margin-top: 20px;
+}
+
+.list > ul > li  {
+    border-top: 1px solid #FFFFFF;
+    padding: 7px 0px;
+}
+
+button {
+ height: 55px;
+ width: 165px;
+ border-radius: 10px;
+ color: #FFFFFF;
+ background-color: rgb(255, 153, 0);
+ cursor: pointer;
+}
+#post-office{
+    background-color: rgb(129, 129, 129);
+}
+button:hover{
+    color: black;
+    border: 1px solid white;
+}
+#post-office:hover {
+    background-color: #27343B;
+   
+}
+
+p {
+    margin: 12px 0;
+}
+.download {
+    display: flex;
+}
+#qr >img {
+    margin-right: 18px;
+    height: 120px;
+    width: 120px;
+}
+.app >img {
+    margin: 6px 0px;
+}
+.phonenumber {
+    display: flex;
+}
+.phonenumber >img {
+    width: 80px;
+    height: 69px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+.mayban {
+    color: rgb(255, 187, 0);
+    font-size: 35px;
+    
+}
+.phone {
+    font-size: 15px;
+    margin-top: 8px;
+}
+.time-service {
+    margin: 8px 0;
+}
+.social {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+.social >a > i {
+    margin: auto;
+    height: 90px;
+    width: 90px;
+    color: rgb(129, 129, 129);
+}
+.social > a> div {
+    background-color: rgb(248, 248, 248);
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+li > a:hover {
+    color: rgb(255, 153, 0);
+}
+
