@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+
+    body {
+        background-color: black;
+    }
+    div {
+        margin: auto;
+        height: 800px;
+        width: 800px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    i {
+        
+        font-size: 300px;
+     
+
+        animation-name: example;
+        animation-duration: 3s;
+        margin: 0;
+        animation-iteration-count: 1000;
+    }
+    @keyframes example {
+        from {
+            font-size: 300px;
+        }
+        25% {
+            transform: scale(0.6);
+            border: 12px  rgba(255, 255, 255, 0.856);
+        }
+        50% {
+            transform: scale(1);
+        }
+        75% {
+            transform: scale(0.6);
+            border: 12px  rgba(255, 255, 255,0.856); 
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    i{
+
+    }
+</style>
+<body>
+    <div class="container">
+        <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+    </div>
+</body>
+</html>
