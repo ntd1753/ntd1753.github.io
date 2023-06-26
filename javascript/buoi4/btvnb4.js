@@ -58,7 +58,7 @@ console.log(isSymmetricString("Hello World"));
 
 //lab 4
   function sortDigits(number) {
-    // Chuyển đổi số thành chuỗi để thao tác dễ dàng
+    // Chuyển đổi số thành chuỗi
      number = number.toString();
     let digits= [];
     let count = 0;
