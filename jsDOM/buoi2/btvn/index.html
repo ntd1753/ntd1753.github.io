@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+     </ul>
+     
+</body>
+<script>
+//1
+    // Tạo phần tử button và ô input
+    const div=document.createElement("div");
+    document.body.appendChild(div);
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add';
+    const inputText = document.createElement('input');
+    inputText.setAttribute('type', 'text');
+    const list = document.getElementById('list');
+    
+    div.insertAdjacentElement('afterend', inputText);
+    inputText.insertAdjacentElement('afterend', addButton);
+
+
+    addButton.addEventListener('click', function() {
+ 
+       const newItemText = inputText.value;
+       if (newItemText.trim() === '') {
+          alert('Vui lòng nhập nội dung!');
+       } else {
+        const newItem = document.createElement('li');
+        newItem.textContent = newItemText;
+        list.appendChild(newItem);
+        inputText.value = '';
+       }
+    });
+//1
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+
+
+    div.insertAdjacentElement('afterbegin', removeButton);
+
+    removeButton.addEventListener('click', function() {
+        if (list.children.length > 0) {
+            list.removeChild(list.lastElementChild);
+    }
+        });
+   //3
+    const hideButton = document.createElement('button');
+    hideButton.textContent = 'Hide';
+    list.insertAdjacentElement('beforebegin', hideButton);
+    hideButton.addEventListener('click', function() {
+    
+      list.style.display = list.style.display === 'none' ? 'block' : 'none';
+     hideButton.textContent = list.style.display === 'none' ? 'Show' : 'Hide';
+});
+
+</script>
+</html>
