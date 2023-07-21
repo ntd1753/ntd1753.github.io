@@ -102,6 +102,7 @@ function removeProductFromCart(id) {
     if (index !== -1) {
     product.splice(index, 1);
     renderUI();
+    updateTotalPrice();
         }
  }
 //tính tổng tiền và vat
@@ -114,6 +115,7 @@ function calculateTotalPrice() {
         let newPrice = quantity * price;
         total += newPrice;
     }
+    
     return total;
 }
 
@@ -141,8 +143,6 @@ function applyPromotionCode() {
         const totalPrice = calculateTotalPrice();
         const discountAmount = (totalPrice * discountPercentage) / 100;
         const totalWithDiscount = totalPrice - discountAmount;
-      
-        
         document.querySelector(".discount span").innerText = "$" + discountAmount.toFixed(2);
         document.querySelector(".total span").innerText = "$" + totalWithDiscount.toFixed(2);
         // alert(`Mã giảm giá ${promoCode} đã được áp dụng!`);
@@ -150,6 +150,5 @@ function applyPromotionCode() {
         alert("Mã giảm giá không hợp lệ. Vui lòng kiểm tra lại!");
     }
 }
-
 
             
