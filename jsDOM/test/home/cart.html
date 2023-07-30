@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <main>
+        <header class="container">
+            <h1>Shopping Cart</h1>
+
+            <ul class="breadcrumb">
+                <li style="cursor: pointer;">Home</li>
+                <li>Shopping Cart</li>
+            </ul>
+
+            <!-- Total product -->
+            <span class="count"></span>
+        </header>
+        <section class="container">
+            <ul class="products" id="products">
+
+            </ul>
+        </section>
+
+        <section class="option-container container">
+            <!-- Mã giảm giá -->
+            <div class="promotion">
+                <label for="promo-code">Have A Promo Code?</label>
+                <input type="text" id="promo-code" autocomplete="off" />
+                <button type="button" onclick="applyPromotionCode()"></button>
+            </div>
+
+            <!-- Tổng tiền -->
+            <div class="summary">
+                <ul>
+                    <li class="subtotal">Subtotal <span></span></li>
+                    <li class="vat">VAT<span></span></li>
+                    <li class="discount hide">Discount<span></span></li>
+                    <li class="total">Total <span></span></li>
+                </ul>
+            </div>
+        </section>
+        <div id="thanhtoan"><button id="order">Đặt Hàng</button></div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous">
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
+

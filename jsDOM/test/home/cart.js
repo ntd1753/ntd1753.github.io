@@ -1,68 +1,35 @@
-var product =[
-    {
-        id: 1,
-        name: "Laptop Asus",
-        description: "lorem ipsum",
-        price: 20,
-        img: "https://www.anphatpc.com.vn/media/news/1411_Asus2mn7.jpg"
-    },
-    {
-        id: 2,
-        name: "Laptop Acer",
-        description: "lorem ipsum",
-        price: 19,
-        img: "https://www.anphatpc.com.vn/media/news/1411_Asus2mn7.jpg"
-    },
-    {
-        id: 3,
-        name: "Macbook",
-        description: "lorem ipsum",
-        price: 21,
-        img: "https://www.anphatpc.com.vn/media/news/1411_Asus2mn7.jpg"
-    },
-    {
-        id: 4,
-        name: "Laptop Dell",
-        description: "lorem ipsum",
-        price: 18,
-        img: "https://www.anphatpc.com.vn/media/news/1411_Asus2mn7.jpg"
-    }
-];
-
+const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 function renderUI(){
     let html="";
-    if(product.length===0) {
+    if(cartItems.length===0) {
         html="<li>chưa có sản phẩm nào trong giỏ hàng</li>";
-      
-   
+
     }
     else {
         html="";
-        for (let i = 0; i <product.length; i++) {
+        for (let i = 0; i <cartItems.length; i++) {
             html+=`  <li class="row">
             <div class="col left">
                 <div class="thumbnail">
                     <a href="#">
-                        <img src="${product[i].img}" alt="" />
+                        <img src="${cartItems[i].img}" alt="" />
                     </a>
                 </div>
                 <div class="detail">
-                    <div class="name"><a href="#">${product[i].name}</a></div>
-                    <div class="description">
-                       ${product[i].description}
-                    </div>
-                    <div class="price" >$${product[i].price}</div>
-                    <div id="price${product[i].id}"></div>
+                    <div class="name"><a href="#">${cartItems[i].name}</a></div>
+
+                    <div class="price" >$${cartItems[i].price}</div>
+                    <div id="price${cartItems[i].id}"></div>
                 </div>
             </div>
 
             <div class="col right">
                 <div class="quantity">
-                    <input type="number" onkeyup="handleOnChangeQuantity(${product[i].id},${product[i].price})" class="product-quantity" id="product${product[i].id}" min="0" step="1" value="1" />
+                    <input type="number" onkeyup="handleOnChangeQuantity(${cartItems[i].id},${cartItems[i].price})" class="cartItems-quantity" id="cartItems${cartItems[i].id}" min="0" step="1" value="${cartItems[i].quantity}" />
                 </div>
 
-                <div class="remove" onclick=" removeProductFromCart(${product[i].id})">
+                <div class="remove" onclick=" removeProductFromCart(${cartItems[i].id})">
                     <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
                 </div>
             </div>
@@ -77,12 +44,18 @@ function renderUI(){
 document.getElementById("products").innerHTML=html;
 }
 renderUI();
+
 function handleOnChangeQuantity(id,price){
     
-    let input_id= "product"+ id;
+    let input_id= "cartItems"+ id;
     let quantity = document.getElementById(input_id).value;
-    
-    // let new_price = quantity * product.find(x => x.id==id).price;
+    for (let index = 0; index < cartItems.length; index++)  {
+        if (cartItems[index].id === id) {
+            cartItems[index].quantity = quantity;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            break;
+        }
+    }
     let newPrice= quantity*price;
     if(quantity<0)  {document.getElementById(input_id).value="1";
     document.getElementById("price" + id).innerText="$"+ price;
@@ -97,29 +70,28 @@ const price_id = document.querySelectorAll(".price");
 
 //xóa sản phẩm   
 function removeProductFromCart(id) {
-    let index = product.findIndex(item => item.id === id);
+    let index = cartItems.findIndex(item => item.id === id);
     if (index !== -1) {
-    product.splice(index, 1);
+    cartItems.splice(index, 1);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
     renderUI();
     updateTotalPrice();
         }
- }
+}
 //tính tổng tiền và vat
 function calculateTotalPrice() {
     let count=0;
     let total = 0;
-    for (let i = 0; i < product.length; i++) {
-        let input_id = "product" + product[i].id;
+    for (let i = 0; i < cartItems.length; i++) {
+        let input_id = "cartItems" + cartItems[i].id;
         let quantity = document.getElementById(input_id).value;
         quantity1=1*quantity;
         count += quantity1;
-        let price = product[i].price;
+        let price = cartItems[i].price;
         let newPrice = quantity * price;
         total += newPrice;
-document.querySelector(".count").innerText=`${count} items in the bag`;
 
     }
-    
     return total;
 }
 
@@ -130,6 +102,7 @@ function updateTotalPrice() {
     document.querySelector(".subtotal span").innerText = "$" + totalPrice.toFixed(2);
     document.querySelector(".vat span").innerText = "$" + vat.toFixed(2);
     document.querySelector(".total span").innerText = "$" + totalWithVAT.toFixed(2);
+
 }
 updateTotalPrice();
 let promotionCode = {
@@ -154,5 +127,9 @@ function applyPromotionCode() {
         alert("Mã giảm giá không hợp lệ. Vui lòng kiểm tra lại!");
     }
 }
-
-            
+$('.breadcrumb').children('li:first').on('click', function (){
+    window.location.href='index.html';
+})
+$('#order').on('click', function () {
+    window.location.href='thanhtoan.html';
+})

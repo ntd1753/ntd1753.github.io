@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.product{
+    width: 70%;
+    display: flex;
+    margin: 50px auto;
+    height: 430px;
+}
+.product-img {
+    width: 30%;
+}
+.product-img > img {
+    width: 100%;
+}
+.product-des {
+    width: 60%;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 100px;
+}
+.price {
+font-weight: bold;
+color: gray;
+}
+.line-product {
+    margin-left: 0px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+}
+.size {
+    width: 80%;
+    font-size: 22px;
+    margin: 10px 0;
+}
+.product-des > button {
+    background-color: black;
+    color:white;
+    height: 50px;
+    margin-top: 5px;
+    width: 182px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px 20px;
+    margin-right: 18px;
+    margin-left: 5px;
+}
+
+.size-sub{
+    height: 25px;
+    width: 50px;
+}
+.quantity{
+    margin: 10px 0;
+    display: block;
+}
+.quantity > .qty-text {
+    margin-right: 10px;
+}
+input {
+    width: 62px;
+}
+.themgiohang {
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+.RELATED-PRODUCTS{
+    width: 99%;
+    height: 600px;
+}
+.related-title{
+
+        font-family: sans-serif;
+
+        display: flex;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+        align-items: center;
+        margin-left: 3%;
+        margin-top: 92px;
+        
+}
+.row {
+    font-family: sans-serif;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+
+}
+.listcard {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+}
+.product1 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.product1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+#homepage{
+    margin: 2% 0% 0% 15%;
+    font-size: 20px;
+    font-weight: 600;
+}
+</style>
+
+
+
+<body>
+    <header>
+        <h1>Product Detail</h1>
+    </header>
+    <div id="homepage"><a href="index.html">Home</a> <span>> Product Detail </span></div>
+    <div class="product-detail" id="product-detail">
+
+    </div>
+    <div class="RELATED-PRODUCTS">
+        <div class="related-title">SẢN PHẨM TƯƠNG TỰ</div>
+        <div class="row" id="productList">
+
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous">
+    </script>
+
+<script src="product.js">
+
+
+
+</script>
+</body>
+
+</html>
+

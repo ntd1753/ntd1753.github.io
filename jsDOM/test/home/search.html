@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main>
+        <header class="container">
+            <h1>Shopping Cart</h1>
+
+            <ul class="breadcrumb">
+                <li>Home</li>
+                <li>Search</li>
+            </ul>
+        </header>
+
+            <!-- Total product -->
+            <header>
+                <section class="container">
+                    <div class="category">
+                    <select name="" id="search-category" >
+                        <option value="">chọn</option>
+                        <option value="phone">Phone</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="accessory">Accessory</option>
+                    </select>
+                    </div>
+                    <div id="price">
+                        <label for="">Min Price: </label>
+                        <input type="number" class="min-price">
+                        <label for="">Max Price: </label>
+                        <input type="number" class="max-price">
+                    </div>
+                    <div class="search-name">
+                        <label for="">Tìm theo tên: </label>
+                        <input type="text" id="searchName">
+                    </div>
+                    <div class="button-search">
+                        <button id="search-item" >Search</button>
+                    </div>
+                    
+                </section >
+
+            </header>
+
+        <section class="container">
+            <ul class="products" id="products">
+
+
+                
+            </ul>
+        </section>
+
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" 
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" 
+    crossorigin="anonymous"></script>
+    <script src="search.js"></script>
+</body>
+
+</html>

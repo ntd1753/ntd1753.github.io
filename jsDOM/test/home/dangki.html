@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 400px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.register-form {
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 92%;
+    height: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #555;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="register-form">
+            <h1>Register</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >
+        $(document).ready(function() {
+    $('#registerForm').submit(function(e) {
+        e.preventDefault();
+        const username = $('#username').val();
+        const password = $('#password').val();
+
+        // Assuming you have not registered with the same username before
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Check if the username is already taken
+        if (users.some(user => user.username === username)) {
+            alert('Tên đăng nhập đã tồn tại. Vui lòng chọn tên đăng nhập khác.');
+            return;
+        }
+
+        // Add the new user to the list
+        users.push({
+            username: username,
+            password: password
+        });
+
+        // Save the updated list back to LocalStorage
+        localStorage.setItem('users', JSON.stringify(users));
+
+        // Redirect to the login page after successful registration
+        window.location.href = 'login.html'; // Replace 'login.html' with the URL of your login page
+    });
+});
+
+    </script>
+</body>
+
+</html>
