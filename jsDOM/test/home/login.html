@@ -89,23 +89,17 @@ input {
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
         crossorigin="anonymous">
     </script>
-
 <script>
 $(document).ready(function() {
     $('#loginForm').submit(function(e) {
         e.preventDefault();
         const username = $('#username').val();
         const password = $('#password').val();
-
-        // Assuming you have stored user credentials in LocalStorage during registration
         const users = JSON.parse(localStorage.getItem('users')) || [];
-
-        // Check if the username and password match any registered user
         const foundUser = users.find(user => user.username === username && user.password === password);
 
         if (foundUser) {
-            // Redirect to the homepage after successful login
-            window.location.href = 'index.html'; // Replace 'homepage.html' with the URL of your homepage
+            window.location.href = 'index.html';
         } else {
             alert('Sai tên đăng nhập hoặc mật khẩu. Vui lòng thử lại.');
         }
