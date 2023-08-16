@@ -1,0 +1,35 @@
+#footer {
+    font-size: 15px;
+    background-color: #e3e5e7;
+}
+#footer li , #footer a{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+#footer ul {
+    padding: 0;
+}
+#footer li {
+    margin-bottom: 5px;
+}
+.footer-left {
+    border-right: 1px solid #cecece;
+}
+.footer-info {
+    padding: 0 15px;
+}
+/* #footer .content {
+    max-width: 1300px;
+} */
+#footer .content {
+    padding: 30px 0;
+    margin: 0px auto;
+}
+#logo {
+    font-family: 'Permanent Marker', cursive;
+    color: #0076c0;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}

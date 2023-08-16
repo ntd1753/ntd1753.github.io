@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Permanent+Marker&family=Roboto:ital,wght@1,300;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="awesome" href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid">
+    <!-- awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+            crossorigin="anonymous">
+</head>
+<body>
+    <div id="main">
+        <div id="head-bar">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div id="address" class="col-lg-6">
+                        <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                        1 Phố Tràng Tiền, Phường Tràng Tiền, Quận Hoàn Kiếm, TP Hà Nội, Việt Nam
+                    </div>
+                    <div id="hotline" class="col-lg-3">Hotline: 099.123.4567</div>
+                    <div id="email-address" class="col-lg-3">
+                        <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                        sachviet@gmail.com
+                    </div>
+            </div>
+            </div>
+        </div>
+        <div id="header" class="container">
+            <div id="header-content" class="row ">
+                    <div class="col-lg-12">
+                        <div class="row">
+                        <div id="header_left" class="col-lg-2 col-md-12"><img src="../../img/LOGO.png" alt=""></div>
+                        <div id="search" class="col-lg-6">
+                        <div id="category" class="col-md-1" >
+                            <button style="background-color: #0076c0;">
+                                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+                                <input type="text" class="search-field"></input>
+                                <button type="submit"class="">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                        </div>
+                        <div id="cart" class="col-lg-2 col-sm-6 d-flex flex-column align-items-center ">
+                            <div id="cart-icon">
+                                <i class="fa-solid fa-cart-shopping fa-2xl "></i>
+                        </div>
+                            <div id="cart-sub">
+                                Giỏ Hàng
+                            </div>
+                        </div>
+                        <div id="account" class="col-lg-2 col-sm-6  d-flex flex-column align-items-center ">
+                            <div id="account-icon"><i class="fa-regular fa-user fa-2xl"></i></div>
+                            <div id="account-sub">tài khoản</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="category-list" class="position-absolute d-none" >
+            <div class="row">
+                <ul>
+                    <li>Sách thiếu nhi</li>
+                    <li>Sách Lịch sử</li>
+                    <li>Sách Văn Học</li>
+                    <li>Sách Kinh Tế</li>
+                    <li>Sách Khoa Học</li>
+                    <li>Sách Tâm Lí</li>
+                </ul>
+            </div>
+        </div>
+        <div id="slider" class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="../../img/slider1_loading.webp" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../../img/slider2_loading.webp" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../../img/slider1_loading.webp" alt="Third slide">
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+        </div>
+        <div id="content" class="container">
+            <div id="sach-hay" class="product-list">
+                <div class="row justify-content-center list-product-title">
+                    <div class="col-md-2 col-3 border-top"></div>
+                    <h1 class="section-title section-title-center text-center col-md-8 col-6">
+                        <span class="section-title-main" >SÁCH HAY</span>
+                    </h1>
+                    <div class="col-md-2 col-3 border-top"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sach-ban-chay" class="product-list">
+                <div class="row justify-content-center list-product-title">
+                    <div class="col-md-2 col-3 border-top"></div>
+                    <h1 class="section-title section-title-center text-center col-md-8 col-6">
+                        <span class="section-title-main" >SÁCH BÁN CHẠY</span>
+                    </h1>
+                    <div class="col-md-2 col-3 border-top"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sach-moi" class="product-list">
+                <div class="row justify-content-center list-product-title">
+                    <div class="col-md-2 col-3 border-top"></div>
+                    <h1 class="section-title section-title-center text-center col-md-8 col-6">
+                        <span class="section-title-main" >SÁCH MỚI</span>
+                    </h1>
+                    <div class="col-md-2 col-3 border-top"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="manga" class="product-list">
+                <div class="row justify-content-center list-product-title">
+                    <div class="col-md-2 col-3 border-top"></div>
+                    <h1 class="section-title section-title-center text-center col-md-8 col-6">
+                        <span class="section-title-main" >TRUYỆN TRANH</span>
+                    </h1>
+                    <div class="col-md-2 col-3 border-top"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">tạp chí fores</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nhiều tác giả</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="price">95.000đ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-3 footer-left">
+                        <div id="logo" style="margin-bottom: 5px;">Sách Việt</div>
+                        <div id="footer-address" style="margin-bottom: 5px;">1 Phố Tràng Tiền, 
+                            Phường Tràng Tiền, Quận Hoàn Kiếm, 
+                            TP Hà Nội, Việt Nam
+                        </div>
+                        <div id="sup-ship" style="margin-bottom: 5px;">Sách Việt nhận đặt hàng trực tuyến 
+                            và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp 
+                            tại văn phòng cũng như tất cả Hệ Thống Sách Việt trên toàn quốc.
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="footer-right">
+                            <div class="row">
+                                <div class="col-lg-4 footer-info">
+                                    <h3>DỊCH VỤ</h3>
+                                    <ul>
+                                        <li><a href="">Điều khoản sử dụng</a></li>
+                                        <li><a href="">Chính sách bảo mật thông tin cá nhân</a></li>
+                                        <li><a href="">Chính sách bảo mật thanh toán</a></li>
+                                        <li><a href="">Giới thiệu</a></li>
+                                        <li><a href="">Hệ thống trung tâm - nhà sách</a></li>
+                                    </ul>
+                                </div>
+                                
+                                    <div class="col-lg-4 footer-info">
+                                        <h3>HỖ TRỢ</h3>
+                                        <ul>
+                                            <li class="first"><a href="">Chính sách đổi - trả - hoàn tiền</a></li>
+                                            <li><a href="">Chính sách bảo hành - bồi hoàn</a></li>
+                                            <li><a href="">Chính sách vận chuyển</a></li>
+                                            <li><a href="">Chính sách khách sỉ</a></li>
+                                            <li class="last"><a href="">Phương thức thanh toán và xuất HĐ</a></li>
+                                        </ul>
+                                    </div>
+                                
+                                    <div class="col-lg-4 footer-info">
+                                        <h3>TÀI KHOẢN CỦA TÔI
+                                        </h3>
+                                        <ul>
+                                            <li class="first footer_login_link"><a href="">Đăng nhập/Tạo mới tài khoản</a></li>
+                                            <li><a href="">Thay đổi địa chỉ khách hàng</a></li>
+                                            <li><a href="">Chi tiết tài khoản</a></li>
+                                            <li class="last"><a href="">Lịch sử mua hàng</a></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="lien-he">
+                                <h3>Liên hệ</h3>
+                                <div class="row">
+                                        <div id="address" class="col-lg-6">
+                                            1 Phố Tràng Tiền, Phường Tràng Tiền, Quận Hoàn Kiếm, TP Hà Nội, Việt Nam
+                                        </div>
+                                        <div id="hotline" class="col-lg-3">Hotline: 099.123.4567</div>
+                                        <div id="email-address" class="col-lg-3">
+                                            sachviet@gmail.com
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/home.js"></script>
+</body>
+</html>
