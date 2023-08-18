@@ -76,7 +76,7 @@ li{
     margin-top: 60px;
 }
 h1{
-    color: #ff1616;
+    color: black;
     font-size: 1.7em;
 }
 .price {
@@ -133,7 +133,7 @@ h1{
     width: 60px;
 }
 #addtocart {
-    font-size: 24px;
+    font-size: 1em;
     font-weight: 700;
     background-color: #ff1616;
     color: #ffffff;
@@ -141,7 +141,7 @@ h1{
     height: 50px;
 }
 .des {
-
+    margin-top: 20px;
     border-bottom: 1px solid #ececec;
 }
 .des-sub {

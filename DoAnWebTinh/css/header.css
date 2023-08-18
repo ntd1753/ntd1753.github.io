@@ -72,28 +72,3 @@ margin-top: 15px;
 li{
     text-decoration: none;
 }
-#slider {
-    margin-top: 20px;
-}
-.card-title {
-    border-bottom: 1px gray;
-}
-.price{
-    color: #c02026;
-    float: right;
-    font-size: 22px;
-    font-weight: bold;
-}
-.list-product-title {
-    margin-bottom: 20px;
-}
-
-.section-title-main{
-    color: #ff1616;
-}
-.product-list {
-    margin: 40px 0;
-}
-.card{
-    margin-bottom: 20px;
-}

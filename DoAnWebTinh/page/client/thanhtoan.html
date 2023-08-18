@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/thanhtoan.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <!-- gg font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Permanent+Marker&family=Roboto:ital,wght@1,300;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/product.css">
+    <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="awesome" href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid">
     <!-- awesome icon -->
@@ -80,143 +85,105 @@
             </div>
         </div>
         <div class="container body-content">
+            <div id="home-link">
+                <span>Trang chủ</span>
+                <span>/</span>
+                <span>Thanh toán</span>
+            </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <img class="d-block w-100" src="../../img/sachchungkhoan.jpg" alt="">
+                <div class="col-lg-7" style="margin-bottom: 20px;">
+                    <div class="title">
+                        Thông tin thanh toán
+                    </div>
+                    
+                    <div class="form-tt">
+                        <div class="custom-name">
+                            <label for="full-name">Họ và tên</label><br> 
+                            <input type="text" name="full-name">
+                        </div>
+                        <div class="custom-info">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="phone-num">Số điện thoại</label><br>
+                                    <input type="tel" name="phone-num">
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <label for="mail">Email</label><br>
+                                    <input type="email" name="mail">
+                                </div>
+                            </div>
+                            <div class="custom-address">
+                                <label for="address">Địa chỉ</label><br>
+                                    <input type="text" name="address">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6" id="product-info">
-                    <div id="home-link">
-                        <span>Trang chủ</span>
-                        <span>/</span>
-                        <span>Sách chứng Khoán</span>
-                    </div>
-                    <h1 id="product-title">Kỹ thuật giao dịch Nâng Cao 
-                        để kiếm tiền hàng ngày trên thị trường chứng khoán
-                    </h1>
-                    <div class="is-divider small"></div>
-                    <div class="price">249.000 đ</div>
-                    <div class="nav">
-                        <ul class="sub-nav">
-                            <li>Nhà xuất bản: NXB Thế Giới</li>
-                            <li>Công ty phát hành: Happy Live</li>
-                            <li>Kích thước: 24 x 16 x 3 cm</li>
-                            <li>Dịch Giả: Thái Phạm – Đỗ Phan Thu Hà</li>
-                            <li>Số trang: 441 trang</li>
-                        </ul>
-                    </div>
-                    <div class="wvn-gift"><span class="tieu-de"><i class="icon-gift"></i><strong> QUÀ TẶNG KÈM</strong></span>
-                        <ul class="gift-list" style="list-style-type: square;">
-                            <li>
-                                <span style="color: #000000;">
-                                    <strong>Tặng</strong>
-                                </span>: 
-                                <span style="color: #ff6600;">
-                                    <strong>Giấy nhớ + Bút Highlight</strong>
-                                </span>
-                                cho đơn hàng từ 
-                                <span style="color: #ff6600;">
-                                    <strong>499k</strong>
-                                </span>
-                            </li>
-                            <li><span style="color: #ff0000;"><strong><span style="color: #000000;">Tặng</span></strong></span><span style="color: #000000;">:</span> <span style="color: #0000ff;"><strong>Sổ da cao cấp + Bút ghi chú</strong></span> cho đơn hàng từ <span style="color: #0000ff;"><strong>699k</strong></span></li>
-                            <li><span style="color: #000000;"><strong>Tặng</strong></span>: Sách <span style="color: #008080;"><strong>Đắc nhân tâm</strong></span> cho đơn hàng từ <span style="color: #008080;"><strong>899k</strong></span></li>
-                        </ul>
-                    </div>
-                    <div class="row">
+                <div class="col-lg-5">
+                    <div class="order-box">
+                        <div class="thanh-toan">
+                            <div class="title">
+                                Đơn hàng của bạn
+                            </div>
+                            <table class="list-cart" cellspacing="0"  style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th class="product-name">Sản phẩm</th>
+                                        <th class="product-price">Tạm tính</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-name">
+                                            <a href="">Tạp chí</a>
+                                        </td>
+                                        <td class="price-product">
+                                            780.000 đ
+                                        </td>
 
-                        <div class="quantity d-flex justify-content-center col-3">
-                            <input type="number" id="quantity1" 
-                                class="input-text qty text" min="1" max="" 
-                                name="quantity" value="1" title="SL"inputmode="numeric">
-                        </div>    
-                        <div class="col-9">
-                            <button type="submit" name="add-to-cart"
-                                value="13779" class="single_add_to_cart_button button alt" id="addtocart">
-                                Thêm vào giỏ hàng
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container des">
-            <div><h2>Mô tả</h2></div>
-            <div class="des-sub">
-                Nếu bạn đã từng đọc thì chắc chắn bạn đã có cơ hội tiếp cận tư duy, 
-                các công cụ, chiến lược giao dịch,… Với những nền tảng này bắt đầu với 
-                cái nhìn sâu sắc về các công cụ cần thiết của giao dịch (phần mềm, nền tảng) 
-                sẽ giúp nhà đầu tư tìm đúng cổ phiếu, áp dụng các công cụ kỹ thuật 
-                (cách xác định mức hỗ trợ và kháng cự, các chỉ báo,…) 
-                cũng như cách quản lý vốn, quản lý cảm xúc để có được giao dịch thành công.
-                Kỹ thuật giao dịch nâng cao để kiếm tiền hàng ngày trên thị trường chứng khoán 
-                là một BẢN NÂNG CẤP và được xem như một “bài đánh giá” sâu rộng về các 
-                chiến lược giao dịch đã được chứng minh, tất cả đều được minh họa bằng các ví dụ 
-                thực tế từ chính giao dịch của tác giả. Các mẹo quản lý rủi ro bao gồm tìm đúng cổ phiếu, 
-                mục tiêu lợi nhuận và cắt lỗ. Mặc dù Kỹ thuật giao dịch nâng cao để kiếm tiền hàng ngày 
-                trên thị trường chứng khoán hướng đến người đọc có những trải nghiệm với giao dịch 
-                trong ngày thế nhưng những nhà giao dịch mới cũng sẽ tìm thấy nhiều kiến thức hữu ích 
-                bên trong quyển sách này.
-            </div>
-            
-        </div>
-        <div class="container body-content" style="margin-bottom: 20px;">
-            <div class="list-title">
-                <h2>SẢN PHẨM TƯƠNG TỰ</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-6">
-                    <div class="card" style="max-width: 18rem;">
-                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">tạp chí fores</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nhiều tác giả</li>
-                        </ul>
-                        <div class="card-body">
-                            <div class="price">95.000đ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="card" style="max-width: 18rem;">
-                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">tạp chí fores</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nhiều tác giả</li>
-                        </ul>
-                        <div class="card-body">
-                            <div class="price">95.000đ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="card" style="max-width: 18rem;">
-                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">tạp chí fores</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nhiều tác giả</li>
-                        </ul>
-                        <div class="card-body">
-                            <div class="price">95.000đ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <div class="card" style="max-width: 18rem;">
-                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">tạp chí fores</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Nhiều tác giả</li>
-                        </ul>
-                        <div class="card-body">
-                            <div class="price">95.000đ</div>
+                                    </tr>
+                                    <tr>
+                                        <th class="title-sum">Tạm tính</th>
+                                        <th class="sum-price-product">780.000đ</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="ship">
+                                <ul id="shipping_method" class="shipping__list" style="padding: 0;">
+                                    <li class="shipping__list_item">
+                                        <input type="radio">
+                                        <label class="shipping__list_label" for="shipping_method_0_free_shipping1">
+                                            Giao hàng miễn phí</label>
+                                    </li>
+                                    <li class="shipping__list_item">
+                                        <input type="radio" value="flat_rate:2" class="shipping_method">
+                                        <label class="shipping__list_label" >Giao hàng NHANH toàn quốc: 
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>30.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span>
+                                                </bdi></span></label>
+                                    </li>
+                                    <li class="shipping__list_item">
+                                        <input type="radio" value="flat_rate:3" class="shipping_method">
+                                        <label class="shipping__list_label" >Ship HỎA TỐC nội thành Hà Nội: 
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>45.000&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">₫</span>
+                                                </bdi>
+                                            </span></label>
+                                    </li>
+                            </ul>
+                            </div>
+                            <div class="sum-price">
+                                <div class="row">
+                                    <div class="col-6">Tổng</div>
+                                    <div class="col-6">780.000đ</div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="radio" name="" id=""> <label for="">Trả tiền mặt khi nhận hàng</label><br>
+                                <input type="radio" name="" id=""> <label for="">Chuyển khoản ngân hàng</label>
+                            </div>
+                            <div class="order"><button type="submit">Thanh Toán</button></div>
                         </div>
                     </div>
                 </div>
