@@ -113,10 +113,12 @@ tbody img {
 }
 
 .list-cart td.sum-price,
-.list-cart td.price-product {
+.list-cart td.sum-price-product {
     font-weight: bold;
 }
-
+td.price-product {
+    font-weight: inherit;
+}
 .list-cart .quantity {
     display: flex;
     align-items: center;
@@ -177,4 +179,7 @@ a .wc-proceed-to-checkout {
 }
 .sum-price .col-6, .tam-tinh {
     font-size: 1.2em;
+}
+.price-product {
+    font-weight: 400;
 }

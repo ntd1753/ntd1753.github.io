@@ -34,6 +34,11 @@ label {
     color: white;
     background-color: #ff1616;
     font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order:hover > button{
+    background-color: #000;
 }
 .order-box {
     border: 1px solid #cecece;

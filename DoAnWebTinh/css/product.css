@@ -139,6 +139,10 @@ h1{
     color: #ffffff;
     width: 60%;
     height: 50px;
+    border-radius: 5px;
+}
+#addtocart:hover {
+    background-color: #000;
 }
 .des {
     margin-top: 20px;
