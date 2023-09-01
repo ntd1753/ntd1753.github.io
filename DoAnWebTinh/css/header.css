@@ -18,6 +18,7 @@ body {
 #header{
     width: 100%;
     min-height: 70px;
+    position: relative;
 }
 
 #header_left {
@@ -26,7 +27,7 @@ body {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-
+cursor: pointer;
     /* padding-top: 10px; */
 }
 
@@ -53,7 +54,9 @@ body {
     background-color: #009cda;
     width: 40px;
 }
-
+#cart{
+    cursor: pointer;
+}
 #cart-icon, #account-icon {
 margin-top: 15px;
 } 
@@ -71,4 +74,43 @@ margin-top: 15px;
 }
 li{
     text-decoration: none;
+    list-style: none;
+}
+#account {
+    cursor: pointer;
+
+}
+#account-sub{
+    position: relative;
+}
+#account-option {
+    position: absolute;
+    top: 64px;
+    z-index: 10;
+    background-color: #fff;
+    font-size: 1.2em;
+    line-height: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+#account-option ul {
+    padding: 0;
+}
+#account-option ul li {
+    padding: 20px 0;
+    text-align: center;
+    min-width: 180px;
+    cursor: pointer;
+}
+#account-option ul li:hover {
+    background-color: #c4c4c4;
+}
+.container {
+    z-index: 1;
+}
+#category {
+    position: relative;
+}
+#category-list {
+    position: absolute;
 }

@@ -6,6 +6,7 @@
     <title>Tìm kiếm</title>
     <link rel="stylesheet" href="../../css/search.css">
     <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/card.css">
     <!-- gg font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +43,7 @@
             <div id="header-content" class="row ">
                     <div class="col-lg-12">
                         <div class="row">
-                        <div id="header_left" class="col-lg-2 col-12">SACH VIET</div>
+                        <div id="header_left" class="col-lg-2 col-12"><img src="../../img/LOGO.png" alt=""></div>
                         <div id="search" class="col-lg-6">
                         <div id="category" class="col-md-1 header_toggle"  id="header-toggle">
                             <button style="background-color: #0076c0;">
@@ -64,6 +65,9 @@
                         <div id="account" class="col-lg-2 col-6  d-flex flex-column align-items-center ">
                             <div id="account-icon"><i class="fa-regular fa-user fa-2xl"></i></div>
                             <div id="account-sub">tài khoản</div>
+                            <div id="account-option" style="display: none;">
+                                
+                            </div>
                         </div>
                         </div>
                     </div>
@@ -100,42 +104,35 @@
                                     <div class="search-title">
                                         <h4>Danh Mục</h4>
                                     </div>
-                                    <div class="todo-list nav-filter__item">
-                                        <ul style="padding: 0;">
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for="">Sách thiếu nhi</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for=""> Sách lịch sử</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for=""> Sách Văn học</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for=""> Sách kinh tế</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for=""> Sách Khoa Học</label>
-                                                
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for="">Sách Tâm Lí</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="" id="">
-                                                <label for="">Sách Tâm Lí</label>
-                                            </li>
-                                        </ul>    
+                                    <div id="choice-category" class="todo-list nav-filter__item">
+                                        <ul style="padding: 0;" id="list-choice-category">
+                                        
+                                        </ul>  
+                                        <h4 id="title-genre" style="display: none;">Thể loại</h4>  
+                                        <ul style="padding: 0;" id="list-choice-genre">
+                                        
+                                        </ul>   
                                     </div>
                                     <div class="nav-filter__item">
                                         <h4 class="sub-page-nav__title">Giá</h4>
-                                        
+                                        <div class="price-input">
+                                            <div class="field">
+                                              <span>Min</span>
+                                              <input type="number" class="input-min" value="0">
+                                            </div>
+                                            <div class="separator">-</div>
+                                            <div class="field">
+                                              <span>Max</span>
+                                              <input type="number" class="input-max" value="1000000">
+                                            </div>
+                                          </div>
+                                          <div class="slider">
+                                            <div class="progress"></div>
+                                          </div>
+                                          <div class="range-input">
+                                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                          </div>
                                     </div>
                                 </div>
                             </div>
@@ -148,62 +145,7 @@
                         </div>
                         <div class="product-list">
                             <div class="row">
-                                <div class="col-lg-3 col-6">
-                                    <div class="card" style="max-width: 18rem;">
-                                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">tạp chí fores</h5>
-                                        </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Nhiều tác giả</li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <div class="price">95.000đ</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-6">
-                                    <div class="card" style="max-width: 18rem;">
-                                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">tạp chí fores</h5>
-                                        </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Nhiều tác giả</li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <div class="price">95.000đ</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-6">
-                                    <div class="card" style="max-width: 18rem;">
-                                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">tạp chí fores</h5>
-                                        </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Nhiều tác giả</li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <div class="price">95.000đ</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-6">
-                                    <div class="card" style="max-width: 18rem;">
-                                        <img src="../../img/tapchi1.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">tạp chí fores</h5>
-                                        </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Nhiều tác giả</li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <div class="price">95.000đ</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -211,10 +153,10 @@
             </div>
         </div>
         <div id="footer">
-            <div class="content">
-                <div class="row container ">
+            <div class="content container">
+                <div class="row container">
                     <div class="col-lg-3 footer-left">
-                        <div id="logo" style="margin-bottom: 5px;">Sách Việt</div>
+                        <div id="logo" style="margin-bottom: 5px;">SACH VIET</div>
                         <div id="footer-address" style="margin-bottom: 5px;">1 Phố Tràng Tiền, 
                             Phường Tràng Tiền, Quận Hoàn Kiếm, 
                             TP Hà Nội, Việt Nam
@@ -286,6 +228,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../../js/card.js"></script>
+    <!-- <script src="../../js/data.js"></script> -->
+    <script src="../../js/common.js"></script>
+    <script src="../../js/search.js"></script>
 </body>
 </html> 
+
