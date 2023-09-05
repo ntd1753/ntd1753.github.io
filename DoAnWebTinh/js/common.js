@@ -1,5 +1,6 @@
 let isLoggedIn = localStorage.getItem('isLoggedIn');
 var accLoggedIn = localStorage.getItem('accLoggedIn');
+const listCategory = JSON.parse(localStorage.getItem('listCategory'));
 $('#header-left').on('click',function(){
     window.location.href = 'home.html';
 });
@@ -28,7 +29,7 @@ function RenderHeader(){
             window.location.href='../auth/login.html';
         })
     }
-    
+    $('.list-category').css('display', 'none');
 }
 RenderHeader();
 $('#header_left').on('click',function(){
@@ -40,7 +41,6 @@ $('#cart').on('click',function(){
 $('.submit-search').on('click', function(event){
     event.preventDefault();
     let searchField = $('.search-field').val();
-
     window.location.href= `search.html?name=${searchField}`;
 })
 
@@ -53,10 +53,33 @@ $(document).ready(function() {
             $('#head-bar').show(); // Hiện "head-bar"
         }
     }
-
+    
     // Gọi hàm kiểm tra khi trang web được tải lần đầu
     toggleHeadBar();
 
     // Gọi hàm kiểm tra khi kích thước màn hình thay đổi
     $(window).resize(toggleHeadBar);
 });
+var category =`<div class="danhmuc-title">Danh mục sản phẩm</div>`;
+listCategory.forEach(items => {
+    category+=`<a href="categorysearch.html?category=${items.id}" class="link-category">
+                    <div class="category-item">
+                        <span>${items.category}</span>
+                        
+                        <span style="float:right">></span>
+                    </div>
+                </a>`;
+});
+
+$('.danhmuc').html(category);
+$(document).ready(function() {
+    var mainHeight = $('#main').height();
+    $('.danhmuc').height(mainHeight);
+    $('.click-to-out').height(mainHeight);
+});
+$('.click-to-out-icon').on('click', function(){
+    $('.list-category').css('display', 'none');
+})
+$('#category').on('click', function(){
+    $('.list-category').toggle();
+})

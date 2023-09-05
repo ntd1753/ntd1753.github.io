@@ -1,13 +1,13 @@
 const product = JSON.parse(localStorage.getItem('product'));
+const urlParams = new URLSearchParams(window.location.search);
+const productCate = urlParams.get('category');
 
 $(document).ready(function(){
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const productName = urlParams.get('name');
-    console.log(productName);
+    let searchCate = listCategory.find(x => x.id.toString() === productCate);
     // Filter the products by name
     const productSearch = product.filter(item => {
-        return item.title.toLowerCase().includes(productName.toLowerCase());
+        return item.category.toLowerCase().includes(searchCate.category.toLowerCase());
     });
     
     renderUI(productSearch);
@@ -31,10 +31,15 @@ function renderUI(title){
         </div></a>
     </div>`
     });
+
     RenderListSearch();
     $('.product-list .row').html(listProd);
+   urlParamsSearch()
+
+
 }
 function RenderListSearch(){ 
+
     let html="";  
     listCategory.forEach(items => {
         html += `<li>
@@ -59,7 +64,9 @@ function RenderListSearch(){
         });
         $('#choice-category #list-choice-genre').html(htmlCheckbox);
         
-    });
+    }
+    );
+
     
 
 };
@@ -148,6 +155,20 @@ function searchResultCategory(id) {
         
     });
 }
+function urlParamsSearch(){
+    let htmlCheckbox=""
+    $(`input[value="${Number(productCate)}"]`).prop('checked', true);
+    let id =  $(`input[value="${Number(productCate)}"]`).val();
+    let newListCategory = listCategory.find(x => x.id.toString() === id.toString());
+    console.log(newListCategory)
+    let genre = newListCategory.genre;
+    $('#title-genre').css('display','block');
+    genre.forEach(items => {
 
-
-
+        htmlCheckbox += `<li>
+    <input type="checkbox" name="${items}" value="${items}" class="checkbox-genre">
+    <label for="${items}">${items}</label>
+    </li>`;
+    });
+    $('#choice-category #list-choice-genre').html(htmlCheckbox);
+}

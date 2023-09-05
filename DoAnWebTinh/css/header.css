@@ -8,17 +8,23 @@
 
 body {
     font-size: 12px;
+    width: 100%
+
 }
 #head-bar{
     background-color: #0076c0;
     width: 100%;
     min-height: 30px;
     color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 4px;
 }
 #header{
     width: 100%;
     min-height: 70px;
     position: relative;
+    z-index: 0;
 }
 
 #header_left {
@@ -111,6 +117,48 @@ li{
 #category {
     position: relative;
 }
-#category-list {
-    position: absolute;
+.list-category{
+    width:100%;
+    z-index: 10;
+    height: 100%;
+}
+.list-category .danhmuc  {
+    min-width: 10%;
+    background-color: #f2f5f5;
+    min-height: 100%;
+}
+.danhmuc-title {
+   
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 16px;
+    text-align: left;
+    padding: 0 12px;
+    margin-bottom: 16px;
+
+}
+.link-category {
+    width: 100%;
+    text-decoration: none;
+}
+#category-list{
+    display: none;
+}
+.category-item{
+    padding-top: 10px;
+    font-weight: bold;
+    color: #212121;
+    min-height: 42px;
+    margin-bottom: 3px;
+    text-decoration: none;
+    padding-right: 5%;
+}
+a{
+    text-decoration: none;
+}
+.click-to-out {
+    background-color:   rgba(0,0,0,.4);
+}
+#close-icon {
+    cursor: pointer;
 }

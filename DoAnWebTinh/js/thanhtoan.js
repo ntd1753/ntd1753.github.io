@@ -50,7 +50,7 @@ $('.order').on('click', function(){
         email: email,
         address: address,
         users: accLoggedIn,
-        OrderItems: JSON.stringify(cartItems)
+        
     });
     // Save the updated list back to LocalStorage
     localStorage.setItem('orderdetail', JSON.stringify(orderdetail));

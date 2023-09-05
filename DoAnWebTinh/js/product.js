@@ -1,4 +1,4 @@
-const listCategory = JSON.parse(localStorage.getItem('listCategory')); // Thay 'yourCategoryStorageKey' bằng tên key thích hợp
+
 const products = JSON.parse(localStorage.getItem('product'));
 $(document).ready(function(){
     const urlParams = new URLSearchParams(window.location.search);

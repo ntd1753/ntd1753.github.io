@@ -6,12 +6,15 @@ function renderUI() {
     let tamTinh=0;
     if (cartItems.length === 0) {
         html = "<li>chưa có sản phẩm nào trong giỏ hàng</li>";
+        $('.content-body').html(html);
     } else {
         html = "";
         for (let i = 0; i < cartItems.length; i++) {
             sumPrice = cartItems[i].price*cartItems[i].quantity;
             
             tamTinh += sumPrice;
+            let vndSumPrice = formatCurrency(sumPrice);
+            let price = formatCurrency(cartItems[i].price);
             html += `
             <tr>
                 <td class="product-remove" >
@@ -24,7 +27,7 @@ function renderUI() {
                     <a href="">${cartItems[i].title}</a>
                 </td>
                 <td class="price-product">
-                ${cartItems[i].price} đ
+                ${price}
                 </td>
                 <td>
                     <div class="quantity buttons_added">
@@ -39,13 +42,15 @@ function renderUI() {
                         <!-- <input type="button" value="+" class="plus button is-form"> -->
                     </div>
                 </td>
-                <td class="sum-price-product">${sumPrice}d</td>
+                <td class="sum-price-product">${vndSumPrice}</td>
             </tr>`;
            
         }
+        let vndTamTinh = formatCurrency(tamTinh);
+        $('.sum-price1').html( vndTamTinh)
+        $('tbody').html(html);
     }
-    $('.sum-price1').html(tamTinh +'đ')
-    $('tbody').html(html);
+ 
     localStorage.setItem("sumCart",JSON.stringify(tamTinh));
 }
 renderUI();
@@ -82,3 +87,8 @@ function removeProd(id) {
         }
 }
 
+function formatCurrency(number) {
+    let newNumber= number;
+    // Sử dụng toLocaleString để định dạng số và thêm dấu phân cách hàng nghìn
+    return newNumber.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+}

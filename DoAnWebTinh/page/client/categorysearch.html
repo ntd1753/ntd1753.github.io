@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thanhtoan</title>
-    <!-- css -->
-    <link rel="stylesheet" href="../../css/thanhtoan.css">
-    <link rel="stylesheet" href="../../css/footer.css">
+    <title>Tìm kiếm</title>
     <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/search.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/card.css">
     <!-- gg font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Permanent+Marker&family=Roboto:ital,wght@1,300;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/home.css">
-    <link rel="stylesheet" href="../../css/footer.css">
     <link rel="awesome" href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid">
     <!-- awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +23,7 @@
             crossorigin="anonymous">
 </head>
 <body>
-    <div id="main">
+    <div id="main" style="position: relative;">
         <div id="head-bar">
             <div class="container">
                 <div class="row d-flex align-items-center">
@@ -43,19 +41,20 @@
         </div>
         <div id="header" class="container">
             
-            <div id="header-content" class="row ">
+            <div id="header-content" class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                        <div id="header_left" class="col-lg-2 col-12">SACH VIET</div>
+                        <div id="header_left" class="col-lg-2 col-12" style="margin-bottom: 1px;"><img src="../../img/LOGO.png" alt=""></div>
                         <div id="search" class="col-lg-6">
-                        <div id="category" class="col-md-1 header_toggle"  id="header-toggle">
+                        <div id="category" class="col-1 header_toggle"  id="header-toggle" style="position: relative;">
                             <button style="background-color: #0076c0;">
                                 <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
                             </button>
+                            
                         </div>
                                 <input type="text" class="search-field"></input>
-                                <button type="submit"class="">
-                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+                                <button type="submit" class="submit-search"><a href="search.html"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+                                </button>
                         </div>
                         <div id="cart" class="col-lg-2 col-6 d-flex flex-column align-items-center ">
                             <div id="cart-icon">
@@ -68,104 +67,76 @@
                         <div id="account" class="col-lg-2 col-6  d-flex flex-column align-items-center ">
                             <div id="account-icon"><i class="fa-regular fa-user fa-2xl"></i></div>
                             <div id="account-sub">tài khoản</div>
+                            <div id="account-option" style="display: none;">
+                                
+                            </div>
                         </div>
                         </div>
                     </div>
                 </div>
         </div>
-       
-        <div class="container body-content">
-            <div id="home-link">
-                <span>Trang chủ</span>
-                <span>/</span>
-                <span>Thanh toán</span>
-            </div>
-            <div class="row">
-                <div class="col-lg-7" style="margin-bottom: 20px;">
-                    <div class="title">
-                        Thông tin thanh toán
-                    </div>
-                    
-                    <div class="form-tt">
-                        <div class="custom-name">
-                            <label for="full-name">Họ và tên</label><br> 
-                            <input type="text" name="full-name" id="full-name">
-                        </div>
-                        <div class="custom-info" id="custom-info">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <label for="phone-num">Số điện thoại</label><br>
-                                    <input type="tel" name="phone-num" id="phone-num">
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <label for="mail">Email</label><br>
-                                    <input type="email" name="mail" id="mail">
-                                </div>
-                            </div>
-                            <div class="custom-address">
-                                <label for="address">Địa chỉ</label><br>
-                                    <input type="text" name="address" id="diachi">
-                            </div>
-                        </div>
-                    </div>
+        
+        <div class="container">
+            <div class="search-content">
+                <div id="home-link">
+                    <span>Trang chủ</span>
+                    <span>/</span>
+                    <span>Tìm kiếm</span>
                 </div>
-                <div class="col-lg-5">
-                    <div class="order-box">
-                        <div class="thanh-toan">
-                            <div class="title">
-                                Đơn hàng của bạn
+                <div class="row">
+                    <div class="col-lg-3 left-content">
+                        <div id="search-filter">
+                            <div id="book-title">
+                                <h2>Lọc theo</h2>
                             </div>
-                            <table class="list-cart" cellspacing="0"  style="width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <th class="product-name">Sản phẩm</th>
-                                        <th class="product-price">Tạm tính</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                             
-                                    <tr>
-                                        <th class="title-sum">Tạm tính</th>
-                                        <th class="sum-price-product"></th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="ship">
-                                <ul id="shipping_method" class="shipping__list" style="padding: 0;">
-                                    <li class="shipping__list_item">
-                                        <input type="radio" name="ship-method" class="shipping_method" value="0" checked>
-                                        <label class="shipping__list_label" for="shipping_method_0_free_shipping1">
-                                            Giao hàng miễn phí</label>
-                                    </li>
-                                    <li class="shipping__list_item">
-                                        <input type="radio" name="ship-method" value="30000" class="shipping_method">
-                                        <label class="shipping__list_label" >Giao hàng NHANH toàn quốc: 
-                                            <span >
-                                                <bdi>30.000&nbsp;<span>₫</span>
-                                                </bdi></span></label>
-                                    </li>
-                                    <li class="shipping__list_item">
-                                        <input type="radio" name="ship-method" value="45000" class="shipping_method">
-                                        <label class="shipping__list_label" >Ship HỎA TỐC nội thành Hà Nội: 
-                                            <span >
-                                                <bdi>45.000&nbsp;
-                                                    <span>₫</span>
-                                                </bdi>
-                                            </span></label>
-                                    </li>
-                            </ul>
-                            </div>
-                            <div class="sum-price">
-                                <div class="row">
-                                    <div class="col-6">Tổng</div>
-                                    <div class="col-6 sum-price-product" id="sum-after-ship">780.000đ</div>
+                            <div id="list-search">
+                                <div id="search-category">
+                                    <div class="search-title">
+                                        <h4>Danh Mục</h4>
+                                    </div>
+                                    <div id="choice-category" class="todo-list nav-filter__item">
+                                        <ul style="padding: 0;" id="list-choice-category">
+                                        
+                                        </ul>  
+                                        <h4 id="title-genre" style="display: none;">Thể loại</h4>  
+                                        <ul style="padding: 0;" id="list-choice-genre">
+                                        
+                                        </ul>   
+                                    </div>
+                                    <div class="nav-filter__item">
+                                        <h4 class="sub-page-nav__title">Giá</h4>
+                                        <div class="price-input">
+                                            <div class="field">
+                                              <span>Min</span>
+                                              <input type="number" class="input-min" value="0">
+                                            </div>
+                                            <div class="separator">-</div>
+                                            <div class="field">
+                                              <span>Max</span>
+                                              <input type="number" class="input-max" value="1000000">
+                                            </div>
+                                          </div>
+                                          <div class="slider">
+                                            <div class="progress"></div>
+                                          </div>
+                                          <div class="range-input">
+                                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                          </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <input type="radio" name="Payment" id="" checked> <label for="">Trả tiền mặt khi nhận hàng</label><br>
-                                <!-- <input type="radio" name="Payment" id=""> <label for="">Chuyển khoản ngân hàng</label> -->
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-9 right-content">
+                        <div id="search-result">
+                            <h3> Kết quả tìm kiếm</h3>
+                        </div>
+                        <div class="product-list">
+                            <div class="row">
+
                             </div>
-                            <div class="order"><button type="submit">Thanh Toán</button></div>
                         </div>
                     </div>
                 </div>
@@ -259,8 +230,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../../js/common.js"></script>
-    <script src="../../js/thanhtoan.js"></script>
+    <script src="../../js/categorysearch.js"></script>
 </body>
-</html>
+</html> 

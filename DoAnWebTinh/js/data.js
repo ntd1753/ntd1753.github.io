@@ -31,8 +31,8 @@ var product= [
             author: "Nhiều Tác Giả",
             nxb: "Giáo Dục Việt Nam",
             price: 70200,
-            category: "Sách giáo khoa",
-            genre: ["Tiểu Thuyết","trinh thám","kinh dị"],
+            category: "Giáo khoa - Tham khảo",
+            genre: ["Sách giáo khoa"],
             img: "../../img/vatli10.jpg",
             describe: `Bộ sách giáo khoa lớp 10 Chân trời sáng tạo của Nhà xuất bản Giáo dục Việt Nam được tổ chức biên soạn nhằm đáp ứng lộ trình áp dụng sách giáo khoa mới được phê duyệt tại Nghị quyết 51/2017/QH14 của Quốc hội, sử dụng từ năm học 2022 – 2023.`
         },
@@ -138,7 +138,7 @@ var product= [
             author: "Napoleon Hill",
             nxb: "NXB Tổng Hợp TPHCM",
             price: 74800,
-            category: " KINH TẾ",
+            category: "KINH TẾ",
             genre: ["nhân vật-bài học kinh doanh"],
             img: "https://cdn0.fahasa.com/media/catalog/product/n/g/nghigiaulamgiau_110k-01_bia-1.jpg",
             describe:`Think and Grow Rich - Nghĩ giàu và làm giàu là một trong những cuốn sách bán chạy nhất mọi thời đại. Đã hơn 60 triệu bản được phát hành với gần trăm ngôn ngữ trên toàn thế giới và được công nhận là cuốn sách tạo ra nhiều triệu phú, một cuốn sách truyền cảm hứng thành công nhiều hơn bất cứ cuốn sách kinh doanh nào trong lịch sử.
@@ -156,7 +156,7 @@ var product= [
             author: "Matthew Walker",
             nxb: "NXB Lao Động",
             price: 174300,
-            category: " KHOA HỌC KỸ THUẬT",
+            category: "KHOA HỌC KỸ THUẬT",
             genre: ["Y HỌC"],
             img: "https://cdn0.fahasa.com/media/catalog/product/b/i/biaao-01.jpg",
             describe:`

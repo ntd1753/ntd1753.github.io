@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Permanent+Marker&family=Roboto:ital,wght@1,300;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/product.css">
+    <link rel="stylesheet" href="../../css/header.css">
+
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="awesome" href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid">
     <!-- awesome icon -->
@@ -20,7 +22,7 @@
             crossorigin="anonymous">
 </head>
 <body>
-    <div id="main">
+    <div id="main" style="position: relative;">
         <div id="head-bar">
             <div class="container">
                 <div class="row d-flex align-items-center">
@@ -68,18 +70,7 @@
                     </div>
                 </div>
         </div>
-        <div id="category-list" class="position-absolute d-none" >
-            <div class="row">
-                <ul>
-                    <li>Sách thiếu nhi</li>
-                    <li>Sách Lịch sử</li>
-                    <li>Sách Văn Học</li>
-                    <li>Sách Kinh Tế</li>
-                    <li>Sách Khoa Học</li>
-                    <li>Sách Tâm Lí</li>
-                </ul>
-            </div>
-        </div>
+
         <div id="product-content" class="container body-content" style="margin-top: 20px;">
             <div class="row">
             </div>
@@ -92,7 +83,7 @@
         </div>
         <div id="relate" class="container body-content" style="margin-bottom: 20px;">
             <div class="list-title">
-                <h2>SÁCH CÙNG THỂ LOẠI</h2>
+                <h2>SÁCH CÙNG TÁC GIẢ</h2>
             </div>
             <div class="row">
 
@@ -165,6 +156,19 @@
                 </div>
         </div>
     </div>
+    </div>
+    <div class="list-category" style="position: absolute; top:0%;" >
+        <div class="row">
+            <div class="col-lg-2 danhmuc" style="padding-right: 0;">
+                <div></div>
+
+            </div>
+            <div class="col-lg-10 click-to-out click-to-out-icon"></div>
+        </div>
+        <div class="click-to-out-icon" id="close-icon" 
+            style="position: absolute; top:5px; right: 5px;">
+                <i class="fa-solid fa-xmark fa-xl"></i>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
