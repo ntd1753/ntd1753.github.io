@@ -1,6 +1,6 @@
 let isLoggedIn = localStorage.getItem('isLoggedIn');
 var accLoggedIn = localStorage.getItem('accLoggedIn');
-const listCategory = JSON.parse(localStorage.getItem('listCategory'));
+let listCategory = JSON.parse(localStorage.getItem('listCategory'));
 $('#header-left').on('click',function(){
     window.location.href = 'home.html';
 });
@@ -18,10 +18,11 @@ function RenderHeader(){
             $('#log-out').on('click', function(){
                 localStorage.setItem('isLoggedIn','false');
                 localStorage.setItem('accLoggedIn','');
+                localStorage.setItem('fullAccLoggedIn','');
                 window.location.href='home.html';
             });
             $('#history').on('click',function(){
-                window.location.href='home.html';
+                window.location.href='history.html';
             })
         })
     } else {
@@ -62,7 +63,7 @@ $(document).ready(function() {
 });
 var category =`<div class="danhmuc-title">Danh mục sản phẩm</div>`;
 listCategory.forEach(items => {
-    category+=`<a href="categorysearch.html?category=${items.id}" class="link-category">
+    category+=`<a href="search.html?category=${items.id}" class="link-category">
                     <div class="category-item">
                         <span>${items.category}</span>
                         
@@ -73,7 +74,8 @@ listCategory.forEach(items => {
 
 $('.danhmuc').html(category);
 $(document).ready(function() {
-    var mainHeight = $('#main').height();
+    let mainHeight = $('#main').height();
+    console.log(mainHeight)
     $('.danhmuc').height(mainHeight);
     $('.click-to-out').height(mainHeight);
 });

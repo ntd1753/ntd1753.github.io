@@ -1,0 +1,58 @@
+
+    /* Định dạng chung cho bảng */
+.list-cart {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Định dạng tiêu đề bảng */
+.list-cart thead th {
+  background-color: #f2f2f2;
+  border-bottom: 3px solid #cecece;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Định dạng ô sản phẩm */
+.list-cart tbody td {
+  border-bottom: 1px solid #cecece;
+  padding: 10px;
+}
+
+/* Định dạng ảnh sản phẩm */
+.list-cart tbody td img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Định dạng tên sản phẩm */
+.list-cart tbody td.product-name {
+  font-weight: bold;
+}
+
+/* Định dạng ô số lượng */
+.list-cart tbody td .quantity {
+  width: 40px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+/* Định dạng hover trên dòng của bảng */
+.list-cart tbody tr:hover {
+  background-color: #f7f7f7;
+}
+table {
+    margin: auto;
+    max-width: 60%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+}
+#list-table{
+    min-height: 400px;
+}

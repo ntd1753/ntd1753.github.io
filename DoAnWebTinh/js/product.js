@@ -22,6 +22,8 @@ $(document).ready(function(){
             });
         }
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        swal("Bạn đã mua hàng thành công!", "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi", "success");
+
     }
     );
 });
@@ -46,8 +48,8 @@ function renderUI(product) {
                 <li>Nhà xuất bản: ${product.nxb}</li>
                 <li>Công ty phát hành: Happy Live</li>
                 <li>Kích thước: 24 x 16 x 3 cm</li>
-                <li>Dịch Giả: Thái Phạm – Đỗ Phan Thu Hà</li>
-                <li>Số trang: 441 trang</li>
+                <li>Tác Giả: ${product.author}</li>
+                
             </ul>
         </div>
         <div class="wvn-gift"><span class="tieu-de"><i class="icon-gift"></i><strong> QUÀ TẶNG KÈM</strong></span>
@@ -71,7 +73,7 @@ function renderUI(product) {
         <div class="row">
             <div class="quantity d-flex justify-content-center col-3">
                 <input type="number" id="quantity1" 
-                    class="input-text qty text" min="1" max="" 
+                    class="input-text qty text" min="1" max="" onkeyup="handleOnChangeQuantity()"
                     name="quantity" value="1" title="SL"inputmode="numeric">
             </div>    
             <div class="col-9">
@@ -81,10 +83,8 @@ function renderUI(product) {
             </div>
         </div>
     </div>`;
-   
     $('#product-content .row').html(html);
     $('.des-sub').html(product.describe);
-    let sameGenre = "";
     let sameAuth= "";
     products.forEach(item => {
         if(item.author === product.author){
@@ -93,10 +93,11 @@ function renderUI(product) {
             }else{
                 let price = formatCurrency(item.price);
                     sameAuth += `<div class="col-lg-3 col-6">
-                    <div class="card" style="max-width: 18rem;">
+                    <a href="product.html?productId=${item.id}" style="text-decoration: none;">
+                    <div class="card" style="width=100%">
                         <img src="${item.img}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">${item.title}</h5>
+                            <div class="card-title">${item.title}</div>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">${item.author}</li>
@@ -104,7 +105,7 @@ function renderUI(product) {
                         <div class="card-body">
                             <div class="price">${price}</div>
                         </div>
-                    </div>
+                    </div></a>
                 </div>`;
             }
         }
@@ -115,4 +116,14 @@ function formatCurrency(number) {
     let newNumber= number;
     // Sử dụng toLocaleString để định dạng số và thêm dấu phân cách hàng nghìn
     return newNumber.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+}
+function handleOnChangeQuantity() {
+    let inputId = "#quantity1";
+    let quantity = $(inputId).val(); 
+    if(quantity<1){
+        quantity=1;
+        $(inputId).val(quantity);
+        console.log($(inputId).val())
+    }
+
 }

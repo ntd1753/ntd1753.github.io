@@ -1,0 +1,42 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .logo{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        height: 60px;
+    }
+    .logo > h1{
+        padding: 10px;
+    }
+    .logo > h1 > a{
+        
+        text-decoration: none;
+        color: white;
+    }
+
+.book {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.book label {
+
+    font-weight: bold;
+}
+
+.book input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.btn-secondary{
+    margin: auto;
+}

@@ -2,7 +2,7 @@ $('#category').on('click', function() {
     $('#category-list').toggleClass("d-block d-none");
 });
 $('.carousel').carousel();
-const product = JSON.parse(localStorage.getItem('product'));
+let product = JSON.parse(localStorage.getItem('product'));
 var productInter= [
     {
         id: "1",

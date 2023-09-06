@@ -33,24 +33,22 @@ function renderUI() {
                     <div class="quantity buttons_added">
                         <!-- <input type="button" value="-" class="minus button is-form"> -->
                         <input type="number" class="input-text qty text" step="1"
-                         min="0" max=""
-                         value="${cartItems[i].quantity}" title="SL" 
-                         size="4"
-                         id="cartItems${cartItems[i].id}"
-                         onchange="handleOnChangeQuantity(${cartItems[i].id})"
-                         >
+                        min="0" max=""
+                        value="${cartItems[i].quantity}" title="SL" 
+                        size="4"
+                        id="cartItems${cartItems[i].id}"
+                        onchange="handleOnChangeQuantity(${cartItems[i].id})"
+                        >
                         <!-- <input type="button" value="+" class="plus button is-form"> -->
                     </div>
                 </td>
                 <td class="sum-price-product">${vndSumPrice}</td>
             </tr>`;
-           
         }
         let vndTamTinh = formatCurrency(tamTinh);
         $('.sum-price1').html( vndTamTinh)
         $('tbody').html(html);
     }
- 
     localStorage.setItem("sumCart",JSON.stringify(tamTinh));
 }
 renderUI();
@@ -59,7 +57,7 @@ function handleOnChangeQuantity(id) {
     let inputId = "#cartItems"+id;
     let quantity = $(inputId).val(); 
     if(quantity<0){
-       quantity=1;
+        quantity=1;
     }
         for (let index = 0; index < cartItems.length; index++) {
         

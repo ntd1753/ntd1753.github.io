@@ -18,6 +18,7 @@ $('.btn-lg').on('click', function(){
             accName = username.substring(0, atIndex);
             localStorage.setItem('isLoggedIn', 'true'); 
             localStorage.setItem('accLoggedIn', accName);
+            localStorage.setItem('fullAccLoggedIn', username);
             swal('Đăng nhập thành công', "", "success");
             setTimeout (function(){
                 window.location.href='../client/home.html';
