@@ -1,0 +1,118 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Exploring travel form Responsive Widget Template : W3layouts</title>
+
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+        content="Exploring travel form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- //google fonts -->
+
+    <!-- custom Style-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
+
+    <!-- daterange css-->
+    <link rel="stylesheet" type="text/css" href="css/lightpick.css">
+    <!-- //daterange css-->
+
+</head>
+
+<body>
+    <!-- form section start -->
+    <section class="w3l-travel-form">
+        <!-- /form -->
+        <div class="travel-form-grid">
+            <div class="wrapper">
+                <div class="logo">
+                    <a class="brand-logo" href="index.html"> Exploring <span>travel form</span></a>
+                    <!-- if logo is image enable this   
+                        <a class="brand-logo" href="#index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+                </div>
+                <div class="travel-block-grid">
+                    <div class="travel-left-img align-end">
+                        <img src="images/travel.png" class="img-responsive" alt="img" />
+                    </div>
+                    <div class="form-right-inf">
+                        <div class="booking-form-content">
+                            <h2>Where to?</h2>
+                            <form action="#" class="book-depature-6 signin-form" method="post">
+                                <div class="input-grids">
+                                    <div class="hny-frm_grid">
+                                        <input class="name" name="Text" type="text" placeholder="Destination"
+                                            required="">
+                                    </div>
+                                    <div class="hny-frm_grid">
+                                        <input class="date" id="datepicker" name="date"
+                                            placeholder="Check In - Check Out" required="">
+                                    </div>
+                                </div>
+                                <div class="input-grids mt-3">
+                                    <div class="hny-frm_grid">
+                                        <select id="category1" name="category1" required="">
+                                            <option value="category1">02 Adults - 1 Room</option>
+                                            <option value="category2">04 Adults - 2 Rooms</option>
+                                            <option value="category3">02 Adults, 1 child - 1 Room</option>
+                                            <option value="category3">02 Adults, 2 childs - 1 Room</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class="check-remaind">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p class="remember">I'm travelling for work</p>
+
+                                </label>
+                                <button class="btn btn-style mt-3">Find your places</button>
+                                <p class="already">Already have an account? <a href="#signin">Signin</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //form -->
+        <!-- copyright-->
+        <div class="copyright text-center">
+            <div class="wrapper">
+                <p class="copy-footer-29">© 2020 Exploring Travel form. All rights reserved | Designed by <a
+                        href="https://w3layouts.com">W3layouts</a></p>
+            </div>
+        </div>
+        <!-- //copyright-->
+    </section>
+    <!-- //form section start -->
+
+    <!-- all js -->
+    <script src="js/moment.min.js"></script>
+    <script src="js/lightpick.js"></script>
+    <script>
+        var picker = new Lightpick({
+            field: document.getElementById('datepicker'),
+            singleDate: false,
+            minDays: 3,
+            maxDays: 7,
+            onSelect: function (start, end) {
+                var str = '';
+                str += start ? start.format('Do MMMM YYYY') + ' to ' : '';
+                str += end ? end.format('Do MMMM YYYY') : '...';
+                document.getElementById('result-9').innerHTML = str;
+            }
+        });
+    </script>
+    <!-- //all js -->
+</body>
+</html>

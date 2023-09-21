@@ -1,4 +1,4 @@
-var product = [
+var productList = [
         {
             id: "1",
             title: "Vầng Trăng Máu",
@@ -208,7 +208,7 @@ var product = [
             `
         }
     ]; 
-var listCategory=[
+var categoryList=[
         {
             id: 1,
             category: "văn học",
@@ -263,5 +263,5 @@ var listCategory=[
                 "Thiết Kế - Kiến Trúc - Xây Dựng"]
         }
     ]
-    localStorage.setItem("product", JSON.stringify(product));
-    localStorage.setItem("listCategory", JSON.stringify(listCategory));
+    localStorage.setItem("product", JSON.stringify(productList));
+    localStorage.setItem("listCategory", JSON.stringify(categoryList));

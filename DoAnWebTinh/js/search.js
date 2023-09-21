@@ -187,6 +187,7 @@ $(document).ready(function(){
         let priceMin = $('.input-min').val();
         let priceMax = $('.input-max').val();
         console.log(priceMax);
+        
         productResult.forEach( item => {
             if(item.price >= priceMin && item.price <= priceMax){
                 let price =formatCurrency(item.price);
