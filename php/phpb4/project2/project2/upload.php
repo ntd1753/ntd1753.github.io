@@ -55,4 +55,5 @@ $file_path= UPLOAD_DIR.$upload_file;
 $suscess= move_uploaded_file($tmp, $file_path);
 
 // 8. Hoàn thành điều hướng về index.php
+echo $suscess;
 header("Location: index.php");

@@ -43,10 +43,8 @@
     <!-- Images Gallery-->
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-8">
         <div class="flex justify-end">
-            <a href="upload_file.php">
-                <button type="button" class="px-6 py-2 rounded border-2 border-green-500 bg-green-500
+                <button type="button" id="upload-btn" class="px-6 py-2 rounded border-2 border-green-500 bg-green-500
                 text-white text-lg hover:bg-white hover:text-green-500 font-bold"> Thêm mới hình ảnh</button>
-            </a>
         </div>
         <div class="w-full mt-8">
             <div class="-m-1 flex flex-wrap md:-m-2">
@@ -132,6 +130,29 @@
             </div>
         </div>
     </div>
+    <div class="absolute w-full h-screen bg-black/50 top-0 left-0 hidden" id="update_form">
+        <div class="flex justify-center items-center">
+            <div class="w-1/3 bg-white p-8 mt-36 rounded">
+                <div class="edit-form">
+                    <form enctype="multipart/form-data" action="./upload.php" method="post">
+                        <div>
+                            <label for="file">Select a file:</label><br>
+                            <input type="file" id="file" class="border" name="file" />
+                        </div>
+                        <div>
+                            <button type="submit"
+                                    class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700
+                                           focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                            >Upload</button>
+                            <button id="exit-btn" type="button" class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700
+                                           focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"> Thoát </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
         let imgDir = '<?php echo $imageDirectory ?>';
         function edit_file_name(filename){
@@ -144,9 +165,12 @@
         function close_edit_form(){
             document.getElementById("edit_form").style.display="none";
         }
-
-
-
+        $('#upload-btn').on('click',function () {
+            $('#update_form').css('display','inline-block');
+        })
+        $('#exit-btn').on('click',function () {
+            $('#update_form').css('display','none');
+        })
     </script>
 
 
