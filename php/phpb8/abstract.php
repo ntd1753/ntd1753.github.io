@@ -4,13 +4,12 @@ abstract class Shape{
     public function __construct($name) {
         $this->name = $name;
     }
-    function caculate(){
-        return 0;
-    }
+    abstract function caculate();
 }
 
 class Cricle extends  Shape {
     private $radius;
+
     public function __construct($radius)
     {
         $this -> radius = $radius;
