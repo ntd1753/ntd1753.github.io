@@ -17,8 +17,6 @@ if(!empty($_SESSION['error'])){
 	<!-- Meta Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Notable Feedback Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates, 
- Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -30,8 +28,7 @@ if(!empty($_SESSION['error'])){
 	</script>
 	<!--// Meta Tags -->
 	<!-- Stylesheets -->
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
+
 	<!--// Stylesheets -->
 	<!--fonts-->
 	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
