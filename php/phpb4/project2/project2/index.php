@@ -26,8 +26,9 @@
         if(isset($_POST["update_image_name"])){
             $newImageName=$_POST["new_image_name"];
             $oldImageName=$_POST["image_name"];
+            echo $newImageName."aaaaaaaaaa";
             $newImagePath=$imageDirectory.$newImageName;
-            $oldImagePath=$imageDirectory.$newImageName;
+            $oldImagePath=$imageDirectory.$oldImageName;
             if(rename($oldImagePath,$newImagePath)){
                 header("Location: index.php");
                 exit;
@@ -121,7 +122,9 @@
                                     <button type="button" class="px-5 py-2 bg-gray-500 text-white text-base border border-gray-500
                                                        hover:text-gray-500 hover:bg-white rounded" onclick="close_edit_form()">Hủy</button>
                                     <button type="submit" class="px-5 py-2 bg-orange-500 text-white text-base border border-orange-500
-                                                       hover:text-orange-500 hover:bg-white rounded " name="update_image_name">Cập nhật</button>
+                                                       hover:text-orange-500 hover:bg-white rounded "
+                                             name="update_image_name">Cập nhật</button>
+
                                 </div>
                             </form>
                         </div>
@@ -135,8 +138,8 @@
             <div class="w-1/3 bg-white p-8 mt-36 rounded">
                 <div class="edit-form">
                     <form enctype="multipart/form-data" action="./upload.php" method="post">
-                        <div>
-                            <label for="file">Select a file:</label><br>
+                        <div class="mb-[20px]">
+                            <label for="file" >Select a file:</label><br>
                             <input type="file" id="file" class="border" name="file" />
                         </div>
                         <div>
@@ -152,6 +155,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
         let imgDir = '<?php echo $imageDirectory ?>';
@@ -171,6 +175,7 @@
         $('#exit-btn').on('click',function () {
             $('#update_form').css('display','none');
         })
+
     </script>
 
 

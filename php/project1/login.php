@@ -51,7 +51,8 @@ if(!empty($_SESSION['error'])){
                         >
                         <br>
                         <input type="submit" value="Đăng ký"
-                               class="w-full h-[55px] rounded-lg bg-[#fdd387] text-xl text-[#3f3a64] font-bold hover:bg-amber-400" placeholder="Đăng ký"
+                               class="w-full h-[55px] rounded-lg bg-[#fdd387] text-xl
+                                       text-[#3f3a64] font-bold hover:bg-amber-400 cursor-pointer" placeholder="Đăng ký"
                                required
                         >
                     </form>
