@@ -17,7 +17,8 @@ if(!empty($_SESSION['error'])){
 	<!-- Meta Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="application/x-javascript">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -36,50 +37,70 @@ if(!empty($_SESSION['error'])){
 	<!--//fonts-->
 </head>
 
-<body>
+<body class="bg-[url('./images/banner.jpg')]">
 	<!--background-->
-	<h1> Notable Feedback Form </h1>
-	<div class="feedback-w3layouts">
-		<form action="check_form.php" method="post">
-			<div class="field-w3-agile-grid leftf">
-				<label>
-					<i class="fa fa-user" aria-hidden="true"></i> Name :</label>
-				<input type="text" name="name" placeholder=" " required="" />
-			</div>
-			<div class="field-w3-agile-grid rightf">
-				<label>
-					<i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
-				<input type="email" name="email" placeholder=" " required="" />
-			</div>
-			<div class="clear"> </div>
-			<div class="form-option-w3-agileits">
-				<label>
-					<i class="fa fa-comments" aria-hidden="true"></i> Feedback type :</label>
-				<select class="form-control" name="cate">
-					<option></option>
-					<option>Comments</option>
-					<option>Bug Reports</option>
-					<option>Questions</option>
-					<option>Suggestions</option>
-				</select>
-			</div>
-			<div class="text-field-agileits-w3layouts">
-				<label>
-					<i class="fa fa-comments" aria-hidden="true"></i> Describe Feedback :</label>
-				<textarea name="Comments" placeholder=" " required=""></textarea>
-			</div>
-			<div class="clear"> </div>
-			<input type="submit" value="Submit">
-		</form><br>
-        <div class="text-[white]">
-        <?php
-        if(!empty($_SESSION['error'])){
-            foreach ($error as $item){
-                echo $item."<br>";
-            }}
-        session_destroy();
-        ?></div>
-	</div>
+    <h1 class="text-[#fdfbfb]  text-center mt-5 mb-3 text-2xl lg:text-6xl lg:mt-[1.8em] lg:mb-[0.9em]" style="text-shadow: 4px 3px 1px #000;"> Notable Feedback Form </h1>
+    <div id="main" class="w-full flex justify-center">
+        <div class="w-7/8 p-4 lg:w-1/2  bg-[white] md:p-10">
+            <form action="check_form.php" method="post">
+                <div class=" md:grid md:grid-cols-2 md:gap-5 md:mb-[25px]">
+                    <div class="">
+                        <label class=>Name :</label><br>
+                        <input type="text" class="w-full h-[43px] border-solid border-[1px] border-[#4e4e4e]
+                        shadow-[2px_2px_6px_rgba(0,0,0,0.49)]
+                        py-[15px] px-[8px] mt-[10px] mb-[10px]
+                        " required>
+                    </div>
+                    <div class="">
+                        <label>
+                            <i class="fa fa-envelope" aria-hidden="true"></i> Email :</label><br>
+                        <input type="email" name="email" class="w-full h-[43px] border-solid border-[1px] border-[#4e4e4e]
+                        shadow-[2px_2px_6px_rgba(0,0,0,0.49)]
+                        py-[15px] px-[8px] mt-[10px] mb-[10px] md:mb-[0px]
+                        " required>
+                    </div>
+                </div>
+
+                <div class="clear"> </div>
+                <div class="mb-[25px]">
+                    <label >
+                        <i class="fa fa-comments" aria-hidden="true"></i> Feedback type :</label>
+                    <select  class="form-control  w-full h-[38px] border-solid border-[1px] border-[#4e4e4e]
+                                    shadow-[2px_2px_6px_rgba(0,0,0,0.49)] text-[black]
+                                     mt-[10px]" name="cate">
+                        <option></option>
+                        <option value="Comments" class="text-[black]">Comments</option>
+                        <option value="Bug Reports" class="text-[black]">Bug Reports</option>
+                        <option value="Questions" class="text-[black]">Questions</option>
+                        <option value="uggestions" class="text-[black]">Suggestions</option>
+                    </select>
+                </div>
+                <div class="mb-[25px]">
+                    <label>
+                        <i class="fa fa-comments" aria-hidden="true"></i> Describe Feedback :</label>
+                    <textarea name="Comments" required class="w-full h-[100px] border-solid border-[1px] border-[#4e4e4e]
+                        shadow-[2px_2px_6px_rgba(0,0,0,0.49)]
+                        py-[15px] px-[8px] mt-[10px]"></textarea>
+                </div>
+                <div class="clear"> </div>
+                <div class="flex justify-center">
+                    <input type="submit" value="Submit"
+                           class="h-[43px] bg-[#ff4c4c] text-[white]
+                                  text-[1.1em] font-normal w-2/5 hover:bg-blue-500 cursor-pointer ">
+                </div>
+            </form><br>
+            <div class="">
+                <?php
+                if(!empty($_SESSION['error'])){
+                    foreach ($error as $item){
+                        echo $item."<br>";
+                    }}
+                session_destroy();
+                ?></div>
+        </div>
+
+    </div>
+
 	<!--copyright-->
 	<div class="copy-wthree">
 		<p>© 2018 Notable Feedback Form . All Rights Reserved | Design by
