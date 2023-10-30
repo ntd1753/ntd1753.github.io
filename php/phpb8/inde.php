@@ -15,16 +15,19 @@ if ($connection->connect_error) {
 echo "Đã kết nối thành công đến CSDL <br>";
 
 // Câu lệnh query để tạo mới table
-$query = "SELECT * FROM MyGuests";
+$query = "SELECT * FROM Users";
 $result = $connection -> query($query);
 $row = $result -> fetch_array(MYSQLI_ASSOC);
-print_r($row);
-// Thực thi câu lệnh query
-if ($connection->query($query) === TRUE) {
-    echo "Đã tạo table thành công";
-} else {
 
-}
+
+
+    function printVariableType($variable) {
+        $type = gettype($variable);
+        echo "Biến này có kiểu dữ liệu là: $type";
+    }
+    printVariableType($row);
+echo "<br>";
+    printVariableType($result);
 
 // Đóng kết nối
 $connection->close();
